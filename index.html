@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Todo 앱</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Todo</h1>
+      <span class="date" id="date"></span>
+    </header>
+
+    <form class="input-area" id="todo-form">
+      <input
+        type="text"
+        id="todo-input"
+        placeholder="할 일을 입력하세요..."
+        autocomplete="off"
+        maxlength="200"
+      />
+      <button type="submit" id="add-btn" aria-label="추가">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
+        </svg>
+      </button>
+    </form>
+
+    <div class="filters" role="tablist">
+      <button class="filter-btn active" data-filter="all" role="tab">전체</button>
+      <button class="filter-btn" data-filter="active" role="tab">진행중</button>
+      <button class="filter-btn" data-filter="completed" role="tab">완료</button>
+    </div>
+
+    <ul class="todo-list" id="todo-list"></ul>
+
+    <footer class="footer" id="footer">
+      <span id="count-label"></span>
+      <button class="clear-btn" id="clear-btn">완료 항목 삭제</button>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
